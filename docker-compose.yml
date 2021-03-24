@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+  phone_service:
+    container_name: phone-service
+    restart: always
+    build: ./phoneService
+    entrypoint: "bash -lc '/entry_point.sh'"
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
+  frontend:
+    container_name: frontend
+    restart: always
+    build: ./frontend
+    links:
+      - phone_service:phone_service
+    depends_on:
+      - phone_service
+    ports:
+      - "9000:80"
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: bridge
