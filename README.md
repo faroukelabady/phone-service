@@ -1,4 +1,4 @@
-# Go Giker
+# Phone Service
 An application for viewing customer phones
 
 ## Requirements:
@@ -16,7 +16,7 @@ you can find the application swagger page at
 - http://localhost:8080/swagger-ui.html
 - http://localhost:8080/actuator
 
-## APIlinks
+## API links
 - http://localhost:8080/customer?page=0&size=10
 - http://localhost:8080/customer/country/{countryCode}?page=0&size=10 eg: countrycode -> 237, page -> pageindex, size -> pageSize
 - http://localhost:8080/customer/country/{countryCode}/state/{state}?page=0&size=10 eg: countrycode -> 237, state -> VALID, page -> pageindex, size -> pageSize
